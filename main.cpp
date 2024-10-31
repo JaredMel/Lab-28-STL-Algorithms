@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iomanip>
 #include <list>
+#include <algorithm>
 #include "Goat.h"
 using namespace std;
 
@@ -44,7 +45,7 @@ int main() {
     
     // Goat Manager 3001 Engine
     int sel = main_menu();
-    while (sel != 4) {
+    while (sel != 12) {
         switch (sel) {
             case 1:
                 cout << "Adding a goat.\n";
@@ -57,6 +58,22 @@ int main() {
             case 3:    
                 cout << "Displaying goat data.\n";
                 display_trip(trip);
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 11:
                 break;
             default:
                 cout << "Invalid selection.\n";
@@ -74,7 +91,15 @@ int main_menu() {
     cout << "[1] Add a goat\n";
     cout << "[2] Delete a goat\n";
     cout << "[3] List goats\n";
-    cout << "[4] Quit\n";
+    cout << "[4] List goats\n";
+    cout << "[5] List goats\n";
+    cout << "[6] List goats\n";
+    cout << "[7] List goats\n";
+    cout << "[8] List goats\n";
+    cout << "[9] List goats\n";
+    cout << "[10] List goats\n";
+    cout << "[11] List goats\n";
+    cout << "[12] Quit\n";
     cout << "Choice --> ";
     int choice;
     cin >> choice;
