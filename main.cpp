@@ -70,18 +70,28 @@ int main() {
                 fill(trip.begin(), trip.end(), Goat());
                 break;
             case 6:
-                cout << "Filling trip data.\n";
-                merge(trip.begin(), trip.end(), trip2.begin(), trip2.end(), trip)
+                cout << "Merging trip data.\n";
+                merge(trip.begin(), trip.end(), trip2.begin(), trip2.end(), trip.begin());
                 break;
             case 7:
+                cout << "Reverse trip data.\n";
+                reverse(trip.begin(), trip.end());
                 break;
             case 8:
+                cout << "Finding upper bound trip data.\n";
+                auto ub = upper_bound(trip.begin(), trip.end(), 3);
                 break;
             case 9:
+                cout << "Finding lower bound trip data.\n";
+                auto ub = lower_bound(trip.begin(), trip.end(), 3);
                 break;
             case 10:
+                cout << "Replacing Goats in trip data.\n";
+                replace(trip.begin(), trip.end(), Goat(), Goat("Timmy"));
                 break;
             case 11:
+                cout << "Replacing Goats in trip data.\n";
+                
                 break;
             default:
                 cout << "Invalid selection.\n";
@@ -101,11 +111,11 @@ int main_menu() {
     cout << "[3] List goats\n";
     cout << "[4] Copy trip\n";
     cout << "[5] Fill trip\n";
-    cout << "[6] \n";
-    cout << "[7] \n";
-    cout << "[8] \n";
-    cout << "[9] \n";
-    cout << "[10] \n";
+    cout << "[6] Merge trips\n";
+    cout << "[7] Reverse trip\n";
+    cout << "[8] Find upper bound trip data\n";
+    cout << "[9] Find lower bound trip data\n";
+    cout << "[10] Replace Goats in trip data\n";
     cout << "[11] \n";
     cout << "[12] Quit\n";
     cout << "Choice --> ";
