@@ -33,6 +33,8 @@ int main() {
     // create & populate a trip of Goats using std::list of random size 8-15
     int tripSize = rand() % 8 + 8;
     list<Goat> trip;
+    list<Goat> trip2;
+    list<Goat> trip3;
     int age;
     string name, color;
     for (int i = 0; i < tripSize; i++) {
@@ -60,10 +62,16 @@ int main() {
                 display_trip(trip);
                 break;
             case 4:
+                cout << "Copying trip data.\n";
+                copy(trip.begin(), trip.end(), trip2.begin());
                 break;
             case 5:
+                cout << "Filling trip data.\n";
+                fill(trip.begin(), trip.end(), Goat());
                 break;
             case 6:
+                cout << "Filling trip data.\n";
+                merge(trip.begin(), trip.end(), trip2.begin(), trip2.end(), trip)
                 break;
             case 7:
                 break;
@@ -91,14 +99,14 @@ int main_menu() {
     cout << "[1] Add a goat\n";
     cout << "[2] Delete a goat\n";
     cout << "[3] List goats\n";
-    cout << "[4] List goats\n";
-    cout << "[5] List goats\n";
-    cout << "[6] List goats\n";
-    cout << "[7] List goats\n";
-    cout << "[8] List goats\n";
-    cout << "[9] List goats\n";
-    cout << "[10] List goats\n";
-    cout << "[11] List goats\n";
+    cout << "[4] Copy trip\n";
+    cout << "[5] Fill trip\n";
+    cout << "[6] \n";
+    cout << "[7] \n";
+    cout << "[8] \n";
+    cout << "[9] \n";
+    cout << "[10] \n";
+    cout << "[11] \n";
     cout << "[12] Quit\n";
     cout << "Choice --> ";
     int choice;
