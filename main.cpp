@@ -90,8 +90,8 @@ int main() {
                 replace(trip.begin(), trip.end(), Goat(), Goat("Timmy"));
                 break;
             case 11:
-                cout << "Replacing Goats in trip data.\n";
-                
+                cout << "Clearing trip data.\n";
+                trip.clear();
                 break;
             default:
                 cout << "Invalid selection.\n";
@@ -116,7 +116,7 @@ int main_menu() {
     cout << "[8] Find upper bound trip data\n";
     cout << "[9] Find lower bound trip data\n";
     cout << "[10] Replace Goats in trip data\n";
-    cout << "[11] \n";
+    cout << "[11] Clear trip\n";
     cout << "[12] Quit\n";
     cout << "Choice --> ";
     int choice;
